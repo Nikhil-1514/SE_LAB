@@ -1,16 +1,83 @@
-# React + Vite
+# Smart Ambulance Route Management & Traffic Clearance System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, high-fidelity frontend prototype designed to reduce ambulance response time through intelligent emergency corridor routing, active road blockage reporting, and synchronized clearance coordination. This project is structured as a Software Engineering capstone prototype.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key System Features
 
-## React Compiler
+### 1. Unified Control Center (Hospital Dashboard)
+- **Emergency Dispatcher**: Instantly create emergency calls with priority levels (Low, Medium, High, Critical).
+- **Corridor Monitor**: Live SVG map simulator showcasing path guidelines and active GPS vehicle tracking.
+- **Traffic Warnings Feed**: Real-time alerts of road blockages requiring traffic authority clearances.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Turn-by-Turn Mobile Console (Driver Dashboard)
+- **Active Missions**: Immediate notifications on assigned emergencies with patient descriptions.
+- **Trip Control Panel**: Status controls to transition routes (Accept, Start navigation, Complete assignment).
+- **Incident Reporting Wizard**: Logging route blockages (Accident, Flood, Traffic) with severity and notes.
 
-## Expanding the Oxlint configuration
+### 3. Priority Corridor Clearance (Traffic Police Dashboard)
+- **Clearance Central**: Verification panel for reported incidents.
+- **Corridor Override Actions**: Approve priority green wave corridors, reject false blockage alerts, or mark blockages cleared.
+- **Map Command**: Displays live positions of hospitals, police squads, ambulances, and incidents.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 4. Interactive Test & Verification Suite
+- A dedicated **Testing Verification Suite** built into the Hospital Dashboard, automating and verifying 10 real-time synchronization test scenarios directly on the workspace state.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Core**: React.js (Component-based architecture)
+- **Tooling & Dev Server**: Vite
+- **Styling**: Modern HSL-Tailored CSS variables, glassmorphic navigations, responsive grid frameworks, and slide-in toast notifications.
+- **Iconography**: Lucide React SVGs
+
+---
+
+## 📁 Workspace Architecture
+
+```text
+├── docs/                      # 12 System Modeling Diagrams
+│   ├── structure_chart.png
+│   ├── project_architecture.png
+│   ├── system_architecture.png
+│   ├── UseCaseDiagram.png
+│   ├── SequenceDiagram.png
+│   ├── ActivityDiagram.png
+│   ├── ClassDiagram.png
+│   ├── ERDiagram.png
+│   ├── ComponentDiagram.png
+│   ├── DeploymentDiagram.png
+│   ├── DataFlowDiagram.png
+│   └── testing_report.png
+├── src/
+│   ├── components/            # Reusable UI Blocks (Navbar, Sidebar, Maps, Charts)
+│   ├── contexts/              # Centralized AppState synchronization provider
+│   ├── pages/                 # Role-specific workspaces (Hospital, Driver, Police)
+│   ├── App.jsx                # Layout Router & viewport dispatcher
+│   └── index.css              # Style tokens, theme configuration & skeletons
+├── index.html                 # Main entry point with SEO optimized tags
+└── package.json               # System dependencies
+```
+
+---
+
+## 💻 Running the Project Locally
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Start the Development Server
+```bash
+npm run dev
+```
+Open **[http://localhost:5173](http://localhost:5173)** in your browser.
+
+### 3. Production Build Compilation
+To check and verify optimized production-ready bundle outputs:
+```bash
+npm run build
+```
